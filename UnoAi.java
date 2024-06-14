@@ -21,8 +21,16 @@ public class UnoAi {
         this.cards = new ArrayList<Card>();
     }
 
-    public void placeCard(int cardIndex) {
-    
+    public void placeCard(int cardIndex, Card currentlyPlacedCard) {
+        for(int x = 0; x < cards.size(); x++){
+            Card cardToPlace = cards.get(x);
+            if(cardToPlace.getColour() == currentlyPlacedCard.getColour() || cardToPlace.getValue() == currentlyPlacedCard.getValue() || cardToPlace.getValue() == 13 || cardToPlace.getValue() == 14)
+            {
+                cards.remove(x);
+                currentCard = cardToPlace;
+            }
+
+        }
     }
 
     public void hitUNO() {
@@ -34,6 +42,7 @@ public class UnoAi {
     }
 
     public void addCard(Card card, String source) {
+        
 
     }
     public void getcurrentCard(Card currentCard)
