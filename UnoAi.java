@@ -38,7 +38,7 @@ public class UnoAi {
     }
     public void getcurrentCard(Card currentCard)
     {
-        this.currentCard = currentCard;
+        this.currentCard = currentCard;//keij
     }
 
 }
